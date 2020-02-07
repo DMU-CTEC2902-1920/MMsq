@@ -28,13 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnMathunila = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnMathunila
+            // 
+            this.btnMathunila.Location = new System.Drawing.Point(297, 116);
+            this.btnMathunila.Name = "btnMathunila";
+            this.btnMathunila.Size = new System.Drawing.Size(75, 23);
+            this.btnMathunila.TabIndex = 0;
+            this.btnMathunila.Text = "mathunila ";
+            this.btnMathunila.UseVisualStyleBackColor = true;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnMathunila);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnMathunila;
     }
 }
 
