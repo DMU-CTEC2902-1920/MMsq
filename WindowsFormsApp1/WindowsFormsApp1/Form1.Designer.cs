@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.lblSufiyaan = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // lblSufiyaan
+            // 
+            this.lblSufiyaan.AutoSize = true;
+            this.lblSufiyaan.Location = new System.Drawing.Point(351, 188);
+            this.lblSufiyaan.Name = "lblSufiyaan";
+            this.lblSufiyaan.Size = new System.Drawing.Size(77, 13);
+            this.lblSufiyaan.TabIndex = 0;
+            this.lblSufiyaan.Text = "Sufiyaan Label";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSufiyaan);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblSufiyaan;
     }
 }
 
