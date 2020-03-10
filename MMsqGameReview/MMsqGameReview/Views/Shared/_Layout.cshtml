@@ -3,7 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!-- TAB NAME -->
+    <title>@ViewBag.Title : MMSQ </title>
+
+    <!-- CSS PAGE -->
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -12,29 +15,36 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+        </button>
+        @Html.ActionLink("HOME", "B", "C", new { area = "" }, new { @class = "navbar-brand" })
+          </div>
+
+            <!-- NAVIGATION BUTTONS -->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Games Review", "Games Review", "Home")</li>
+                    <li>@Html.ActionLink("Developers", "Developers", "Home")</li>
+                    <li>@Html.ActionLink("League Table", "League Table", "Home")</li>
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        <!-- FOOTER -->
+        <div id="Footer">
+            <footer>
+                <a href=" "> <p> About MMsq | Privacy Policy | Terms and Conditions | Code of Conduct | FAQ/Help | Contact Us </a>
+                <p>  &copy; @DateTime.Now.Year All Rights Reserved.</p>
+</footer>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
