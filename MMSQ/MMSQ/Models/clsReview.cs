@@ -15,5 +15,11 @@ namespace MMSQ.Models
         public bool Reiew_ReviewStatus { get; set; }
 
         public int Reiew_ReviewUser { get; set; }
+
+
+
+
+
+
     }
 }
