@@ -26,5 +26,20 @@ namespace MMSQ.Controllers
 
             return View();
         }
+
+        public ActionResult GamesReview()
+        {
+            return View();
+        }
+
+        public ActionResult Developers()
+        {
+            return View();
+        }
+
+        public ActionResult LeagueTable()
+        {
+            return View();
+        }
     }
 }
