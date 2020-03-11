@@ -174,6 +174,18 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\clsAdmin.cs" />
+    <Compile Include="Models\clsAdminCollection.cs" />
+    <Compile Include="Models\clsComment.cs" />
+    <Compile Include="Models\clsCommentCollection.cs" />
+    <Compile Include="Models\clsDeveloper.cs" />
+    <Compile Include="Models\clsDeveloperCollection.cs" />
+    <Compile Include="Models\clsGame.cs" />
+    <Compile Include="Models\clsGameCollection.cs" />
+    <Compile Include="Models\clsReview.cs" />
+    <Compile Include="Models\clsReviewCollection.cs" />
+    <Compile Include="Models\clsUser.cs" />
+    <Compile Include="Models\clsUserCollection.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
