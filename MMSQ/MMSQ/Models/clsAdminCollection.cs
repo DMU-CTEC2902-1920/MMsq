@@ -7,5 +7,10 @@ namespace MMSQ.Models
 {
     public class clsAdminCollection
     {
+        //Count Admin
+        public int Count { get; set; }
+
+        //List Developers
+        public List<clsAdmin> MyAdmin { get; set; }
     }
 }
