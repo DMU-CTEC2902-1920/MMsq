@@ -11,7 +11,7 @@ namespace MMSQ.Models
         public int Count { get; set; }
 
         //List Users
-        public List<clsUser> UserList { get; set; }
+        public List<clsUser> MyUsers { get; set; }
 
         //Add Method
         public int Add()

@@ -9,9 +9,11 @@ namespace MMSQ.Models
     
     public class clsUser
     {
+        //Private User Data Member
+        private int mUserID;
+
         //User Properties 
         [Required]
-        private int mUserID;
         public int UserID { get; set; }
 
         [Required]
@@ -55,7 +57,7 @@ namespace MMSQ.Models
     //}
     
     //Validation Method
-    //public string Valid(string UserID, string User_Username, string User_Password, string User_Firstname, string User_Lastname, string User_Gender, string User_Telephone, string User_Email, string User_DateOfBirth, string User_AccountStatus)
+    //public string Valid(string User_Username, string User_Password, string User_Firstname, string User_Lastname, string User_Gender, string User_Telephone, string User_Email, string User_DateOfBirth, string User_AccountStatus)
     //{
     //    return "";
     //}
