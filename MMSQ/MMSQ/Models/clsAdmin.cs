@@ -42,7 +42,7 @@ namespace MMSQ.Models
     //}
 
     //Validation Method
-    //public string Valid(string AdminID, string Admin_Firstname, string Admin_Lastname. string Amdin_Gender, string Admin_Email, string Admin_Password, string Admin_Telephone)
+    //public string Valid(string Admin_Firstname, string Admin_Lastname. string Amdin_Gender, string Admin_Email, string Admin_Password, string Admin_Telephone)
     //{
     //    return "";
     //}

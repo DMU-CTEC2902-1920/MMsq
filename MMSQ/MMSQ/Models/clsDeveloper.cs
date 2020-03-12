@@ -27,7 +27,7 @@ namespace MMSQ.Models
     //}
 
     //Validation Method
-    //public string Valid(string DeveloperID, string Developer_DeveloperName, string Developer_GamesProduced)
+    //public string Valid(string Developer_DeveloperName, string Developer_GamesProduced)
     //{
     //    return "";
     //}
