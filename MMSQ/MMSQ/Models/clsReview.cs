@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using MMSQ.Models;
 
 namespace MMSQ.Models
 {
@@ -13,14 +14,15 @@ namespace MMSQ.Models
         public int ReviewID { get; set; }
 
         [Required]
+        [MinLength(2)][MaxLength(50)]
+        public string Review_GameTitle { get; set; }
+
+        [Required]
         [MinLength(2)][MaxLength(100)]
-        public string Reiew_ReviewDescription { get; set; }
+        public string Review_ReviewDescription { get; set; }
 
         [Required]
-        public bool Reiew_ReviewStatus { get; set; }
-
-        [Required]
-        public virtual int UserID { get; set; }
+        public bool Review_ReviewStatus { get; set; }
 
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
+using MMSQ.Models;
 
 namespace MMSQ.Models
 {
@@ -48,6 +49,8 @@ namespace MMSQ.Models
 
         [Required]
         public bool User_AccountStatus { get; set; }
+
+        public List<clsReview> GameReview { get; set; }
     }
 
     //Filter Method
