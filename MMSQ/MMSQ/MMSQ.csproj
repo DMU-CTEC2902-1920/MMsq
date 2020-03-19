@@ -199,9 +199,12 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\mati.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\brick.jpg" />
+    <Content Include="Images\Game Developer.jpg" />
     <Content Include="Images\Game Developer.png" />
     <Content Include="Images\Games Review.jpg" />
     <Content Include="Images\League Table.jpg" />
