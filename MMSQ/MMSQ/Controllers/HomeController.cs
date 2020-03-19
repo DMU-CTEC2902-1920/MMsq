@@ -13,20 +13,6 @@ namespace MMSQ.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
         public ActionResult GamesReview()
         {
             return View();
@@ -39,6 +25,19 @@ namespace MMSQ.Controllers
 
         public ActionResult LeagueTable()
         {
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "About Us";
+
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Message = "Contact Us";
             return View();
         }
     }

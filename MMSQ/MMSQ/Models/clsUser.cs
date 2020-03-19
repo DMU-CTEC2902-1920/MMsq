@@ -11,7 +11,7 @@ namespace MMSQ.Models
     public class clsUser
     {
         //Private User Data Member
-        private int mUserID;
+        //private int mUserID;
 
         //User Properties 
         [Required]
