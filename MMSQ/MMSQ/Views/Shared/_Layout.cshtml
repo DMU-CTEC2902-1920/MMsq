@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title MMSQ </title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/mati.css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -22,7 +23,7 @@
 
         <!-- Navigation Buttons-->
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav mr-auto" style="margin-left:575px;">
+            <ul class="nav navbar-nav mr-auto" style="margin-left:625px;">
                 <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Games Review", "GamesReview", "Home", null, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Developers", "Developers", "Home", null, new { @class = "nav-link" })</li>
@@ -39,19 +40,30 @@
             </ul>
         </div>
 
-
- 
-
-
     </nav>
         <div class="container body-content">
             @RenderBody()
             <hr />
-            <footer style=" background:white; color:black;">
-                <p>&copy; @DateTime.Now.Year - MMSQ </p>
-                @*<li>@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>*@
+            <!-- FOOTER -->
+            <footer class="foot footer-expand-sm footer-dark fixed-bottom bg-dark" style="color:darkgrey;">
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <br />
+                        <a href="/Home/About" style="color:darkgrey;"> About MMSQ </a>
+                        |
+                        <a href="#" style="color:darkgrey;"> Privacy Policy </a>
+                        |
+                        <a href="#" style="color:darkgrey;"> Terms And Conditions </a>
+                        |
+                        <a href="#" style="color:darkgrey;"> Code of Conduct </a>
+                        |
+                        <a href="#" style="color:darkgrey;"> FAQ/Help </a>
+                        |
+                        <a href="/Home/Contact" style="color:darkgrey;"> Contact Us </a>
+                    </p>  
+                    <p class="CompName" style="color:darkgrey;">&copy; @DateTime.Now.Year - MMSQ </p>
 
+                </div>
             </footer>
         </div>
 

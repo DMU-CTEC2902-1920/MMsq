@@ -1,6 +1,6 @@
 ﻿body {
-    background: black;
-    color:white;
+    background:lightgrey;
+    color:black;
 }
 
 /*Game Review Image*/
@@ -134,4 +134,17 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+/* FOOTER */
+
+.footer-links 
+{
+    text-align: center;
+    color:grey;
+}
+
+.CompName {
+    text-align: center;
+    
 }
