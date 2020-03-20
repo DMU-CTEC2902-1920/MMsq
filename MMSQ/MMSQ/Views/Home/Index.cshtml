@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Home Page";
     @Styles.Render("~/Content/mati.css")
+    <!-- Javascript Link to Images-->
+    <script src="~/Scripts/ImageLinks.js"></script>
 }
 
 <br />
@@ -11,51 +13,33 @@
 
         @*Game Review Image*@
         <div class="container">
-            <img src="~/Images/Games Review.jpg" class="image" alt="Games Review Image"/>
-            <div class="overlay">
-                <div class="text">GAME REVIEW</div>
-            </div>
+                <img src="~/Images/Games Review.jpg" class="image" alt="Games Review Image" />
+                <div class="overlay">
+                    <a href="/Home/GamesReview">
+                        <div class="text">GAME REVIEW</div>
+                    </a>
+                </div>
         </div>
 
         @*Developer Image*@
         <div class="container2">
             <img src="~/Images/Game Developer.jpg" class="image2" alt="Developers Image" />
             <div class="overlay2">
-                <div class="text2">DEVELOPERS</div>
+                <a href="/Home/Developers">
+                    <div class="text2">DEVELOPERS</div>
+                </a>
             </div>
         </div>
 
         @*League Table Image*@
         <div class="container3">
-            <img src="~/Images/League Table.jpg" class="image3" alt="League Table Image"/>
+            <img src="~/Images/League Table.jpg" class="image3" alt="League Table Image" />
             <div class="overlay3">
-                <div class="text3">LEAGUE TABLE </div>
+                <a href="/Home/LeagueTable">
+                    <div class="text3">LEAGUE TABLE </div>
+                </a>
             </div>
         </div>
-
-
-
-
-
-
-
-        @*<a href="~/Home/Contact" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Contact Page </a>
-        <a href="~/Home/About" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">About Page </a>*@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </form>
 </nav>
 
