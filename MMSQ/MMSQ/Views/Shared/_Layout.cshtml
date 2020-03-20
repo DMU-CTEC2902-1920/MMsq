@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title MMSQ </title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/mati.css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                datatarget="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                ariaexpanded="false" aria-label="Toggle navigation"></button>
+        <!-- MMSQ Navigation-->
+        <div class=" MMSQ" style="margin-left:70px;">
+            @Html.ActionLink("MMSQ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+
+        <!-- Navigation Buttons-->
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav mr-auto" style="margin-left:625px;">
+                <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Games Review", "GamesReview", "Home", null, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Developers", "Developers", "Home", null, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("League Table", "LeagueTable", "Home", null, new { @class = "nav-link" })</li>
+            </ul>
+        </div>
+
+
+        <!-- Log In/Register Buttons-->
+        <div class="Sign" style="margin-right:100px;">
+            <ul class="nav navbar-nav mr-auto">
+                <li>@Html.ActionLink("Log in", "Login", "Account", null, new { @class = "nav-link" }) </li>
+                <li>@Html.ActionLink("Register", "Register", "Account", null, new { @class = "nav-link" })</li>
+            </ul>
+        </div>
+
+    </nav>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <!-- FOOTER -->
+            <footer class="foot footer-expand-sm footer-dark fixed-bottom bg-dark" style="color:darkgrey;">
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <br />
+                        <a href="/Home/About" style="color:darkgrey;"> About MMSQ </a>
+                        |
+                        <a href="#" style="color:darkgrey;"> Privacy Policy </a>
+                        |
+                        <a href="#" style="color:darkgrey;"> Terms And Conditions </a>
+                        |
+                        <a href="#" style="color:darkgrey;"> Code of Conduct </a>
+                        |
+                        <a href="#" style="color:darkgrey;"> FAQ/Help </a>
+                        |
+                        <a href="/Home/Contact" style="color:darkgrey;"> Contact Us </a>
+                    </p>  
+                    <p class="CompName" style="color:darkgrey;">&copy; @DateTime.Now.Year - MMSQ </p>
+
+                </div>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
