@@ -5,21 +5,18 @@
 }
 
 <h2>
-    View User <span class="badge badge-primary">
-        #
-        @Model.UserID
-    </span>
+    View User <span class="badge badge-primary"> @Model.UserID </span>
 </h2>
+
+    <!-- USER DETAILS PAGE-->
 <div class="card">
     <div class="card-header">
         <h2 class="card-title">
-            <a data-toggle="collapse" href="#userInfo">
-                User Details
-                <span class=""></span>
-            </a>
+            <a data-toggle="collapse" href="#userInfo"> User Details <span class=""></span></a>
         </h2>
-
     </div>
+
+    <!--USER DETAILS-->
     <div id="userInfo" class="collapse">
         <div class="card-body">
             @Html.HiddenFor(o => o.UserID)
@@ -35,6 +32,7 @@
     </div>
 </div>
 
+<!-- GAME REVIEWS SUBMISSION-->
 <h2>
     Game Reviews Submitted
 </h2>
@@ -52,7 +50,7 @@
             @foreach (var review in @Model.GameReview)
             {
                 <tr>
-                    <!--Tabl-->
+                    <!--Game Review Data Per Row-->
                     <td>@review.ReviewID</td>
                     <td><a href="~/Views/Home/Index.cshtml">@review.Review_GameTitle</a></td>
                     <td>@review.Review_ReviewDescription</td>

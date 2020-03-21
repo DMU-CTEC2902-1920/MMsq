@@ -12,6 +12,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600&display=swap");
+
+/*LUMEN THEME USED ACROSS ALL WEB PAGES*/
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
