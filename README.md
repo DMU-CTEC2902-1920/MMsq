@@ -1,1 +1,1 @@
-# MMsq
+# Welcome to MMsq!
