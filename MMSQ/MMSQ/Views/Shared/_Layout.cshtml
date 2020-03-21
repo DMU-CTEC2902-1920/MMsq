@@ -4,18 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title MMSQ </title>
+
+    <!-- Master Page -->
+
+    <!-- CSS Links-->
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/mati.css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
+
 <body>
+    <!-- Navigation Bar Appearance -->
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
 
+        <!-- Navigation Buttons Appearance-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" datatarget="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                ariaexpanded="false" aria-label="Toggle navigation">
+        </button>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                datatarget="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                ariaexpanded="false" aria-label="Toggle navigation"></button>
         <!-- MMSQ Navigation-->
         <div class=" MMSQ" style="margin-left:70px;">
             @Html.ActionLink("MMSQ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
@@ -31,7 +38,6 @@
             </ul>
         </div>
 
-
         <!-- Log In/Register Buttons-->
         <div class="Sign" style="margin-right:100px;">
             <ul class="nav navbar-nav mr-auto">
@@ -41,6 +47,7 @@
         </div>
 
     </nav>
+
         <div class="container body-content">
             @RenderBody()
             <hr />
@@ -61,7 +68,7 @@
                         |
                         <a href="/Home/Contact" style="color:darkgrey;"> Contact Us </a>
                     </p>  
-                    <p class="CompName" style="color:darkgrey;">&copy; @DateTime.Now.Year - MMSQ </p>
+                    <p class="CompName" style="color:darkgrey;">&copy; @DateTime.Now.Year MMSQ </p>
 
                 </div>
             </footer>
