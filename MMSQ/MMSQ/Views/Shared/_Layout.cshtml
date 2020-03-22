@@ -30,7 +30,7 @@
 
         <!-- Navigation Buttons-->
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav mr-auto" style="margin-left:625px;">
+            <ul class="nav navbar-nav mr-auto" style="margin-left:605px;">
                 <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Games Review", "GamesReview", "Home", null, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Developers", "Developers", "Home", null, new { @class = "nav-link" })</li>
@@ -54,7 +54,7 @@
             <!-- FOOTER -->
             <footer class="foot footer-expand-sm footer-dark fixed-bottom bg-dark" style="color:darkgrey;">
                 <div class="footer-left">
-                    <p class="footer-links">
+                    <p class="footer-links" style="text-align:center;">
                         <br />
                         <a href="/Home/About" style="color:darkgrey;"> About MMSQ </a>
                         |
@@ -68,7 +68,7 @@
                         |
                         <a href="/Home/Contact" style="color:darkgrey;"> Contact Us </a>
                     </p>  
-                    <p class="CompName" style="color:darkgrey;">&copy; @DateTime.Now.Year MMSQ </p>
+                    <p class="CompName" style="color:darkgrey; text-align:center;">&copy; @DateTime.Now.Year MMSQ </p>
 
                 </div>
             </footer>

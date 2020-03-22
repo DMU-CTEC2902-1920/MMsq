@@ -4,6 +4,15 @@ body {
     color:black;
 }
 
+#Search
+{
+    position:absolute; 
+    top:70px;
+    left:600px;
+}
+
+
+
 /*Game Review Image*/
 .container {
     position: relative;
@@ -149,3 +158,4 @@ body {
     text-align: center;
     
 }
+
