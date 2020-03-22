@@ -55,6 +55,9 @@ namespace MMSQ.Controllers
             return View("Search Result", SearchQuery);
         }
 
-
+        public ActionResult UnderConstruction()
+        {
+            return View();
+        }
     }
 }

@@ -159,3 +159,55 @@ body {
     
 }
 
+.social-menu ul {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.social-menu ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+/*Under Construction Page*/
+
+.UnderConstruc
+{
+    top: 300px;
+    left: 350px;
+    position:absolute;
+    color: black;
+    text-align:center;
+    font-size: 40px;
+
+}
+
+#launch
+{
+    font-size: 16px;
+
+}
+
+
+/*.contents {
+    font-family: tahoma;
+    text-align: center;
+    color: black;
+    padding-bottom: 35px;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight:normal;
+    margin-top: -50px;
+}
+
+.contents h2 {
+    font-family: tahoma;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: normal;
+}*/

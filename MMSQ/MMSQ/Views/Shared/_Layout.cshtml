@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title MMSQ </title>
-
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Master Page -->
-
     <!-- CSS Links-->
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/mati.css")
     @Scripts.Render("~/bundles/modernizr")
+
 
 </head>
 
@@ -55,19 +55,25 @@
             <footer class="foot footer-expand-sm footer-dark fixed-bottom bg-dark" style="color:darkgrey;">
                 <div class="footer-left">
                     <p class="footer-links" style="text-align:center;">
-                        <br />
                         <a href="/Home/About" style="color:darkgrey;"> About MMSQ </a>
                         |
-                        <a href="#" style="color:darkgrey;"> Privacy Policy </a>
+                        <a href="/Home/UnderConstruction" style="color:darkgrey;"> Privacy Policy </a>
                         |
-                        <a href="#" style="color:darkgrey;"> Terms And Conditions </a>
+                        <a href="/Home/UnderConstruction" style="color:darkgrey;"> Terms And Conditions </a>
                         |
-                        <a href="#" style="color:darkgrey;"> Code of Conduct </a>
+                        <a href="/Home/UnderConstruction" style="color:darkgrey;"> Code of Conduct </a>
                         |
-                        <a href="#" style="color:darkgrey;"> FAQ/Help </a>
+                        <a href="/Home/UnderConstruction" style="color:darkgrey;"> FAQ/Help </a>
                         |
                         <a href="/Home/Contact" style="color:darkgrey;"> Contact Us </a>
-                    </p>  
+
+                    <div class="social-menu">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div> <br />
                     <p class="CompName" style="color:darkgrey; text-align:center;">&copy; @DateTime.Now.Year MMSQ </p>
 
                 </div>
