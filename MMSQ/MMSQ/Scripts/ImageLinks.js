@@ -7,3 +7,5 @@ $(".overlay2").click(function () {
 $(".overlay3").click(function () {
     window.location = "http://localhost:52806/Home/LeagueTable";
 });
+
+

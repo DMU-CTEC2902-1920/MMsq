@@ -40,5 +40,21 @@ namespace MMSQ.Controllers
             ViewBag.Message = "Contact Us";
             return View();
         }
+
+        //GET: Action for rendering view
+        public ActionResult SearchResult()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SearchResult(string SearchQuery)
+        {
+            ViewBag.SearchKey = SearchQuery;
+
+            return View("Search Result", SearchQuery);
+        }
+
+
     }
 }
