@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMSQ", "MMSQ\MMSQ.csproj", "{A38E4935-8FDA-45BB-9626-661C55A2D575}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMSQ.Tests", "MMSQ.Tests\MMSQ.Tests.csproj", "{430EAACE-54FB-45E3-B8D3-CD6ED641A644}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A38E4935-8FDA-45BB-9626-661C55A2D575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A38E4935-8FDA-45BB-9626-661C55A2D575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A38E4935-8FDA-45BB-9626-661C55A2D575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A38E4935-8FDA-45BB-9626-661C55A2D575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430EAACE-54FB-45E3-B8D3-CD6ED641A644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430EAACE-54FB-45E3-B8D3-CD6ED641A644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430EAACE-54FB-45E3-B8D3-CD6ED641A644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430EAACE-54FB-45E3-B8D3-CD6ED641A644}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {396D4C77-0469-47AC-9175-3EE5976B6461}
+	EndGlobalSection
+EndGlobal

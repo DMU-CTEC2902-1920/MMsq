@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+    <!-- CSS Links-->
+    @Styles.Render("~/Content/MMSQ.css")
+
+    <!-- Javascript Link to Images-->
+    <script src="~/Scripts/ImageLinks.js"></script>
+
+}
+
+ Redirect Search Button To A Specific Page
+<script type="text/javascript">
+    function redirect() {
+        window.location = "http://www.google.com/"
+    }
+</script>
+
+<!-- HOME PAGE -->
+<!-- Home Page Container-->
+<nav class="navbar navbar-light bg-light" style="width:1500px; margin-left:-280px;">
+    <form class="form-inline" style="background:#b8b9ba; width:1500px; ">
+
+        @*Search Bar Test
+        @using (Html.BeginForm("SearchResult", "Home", FormMethod.Post))
+        {
+
+            <<div id="Search">
+                
+                Search:<br>
+                <input type="text" id="SearchQuery" name="SearchQuery" style="width:1500px; height:30px;">>
+                <input type="submit" id="submitId" value="submit" />
+
+            </div>
+
+        }
+
+        @{
+            if (ViewBag.SearchKey != null)
+            {
+                <span>
+                    Search Key: @ViewBag.SearchKey
+                </span>
+            }
+        }*@
+
+         <!--Search Bar-->
+        <div id="Search">
+            <input type="text" placeholder="Search" name="search" style="width:1500px; height:30px;">
+            <!--Redirect Search Button-->
+            <input type="button" onclick="redirect()" value="Search">
+        </div>
+
+        @*Game Review Image*@
+        <div class="container">
+            <img src="~/Images/Games Review.jpg" class="image" alt="Games Review Image" />
+            <div class="overlay">
+                <a href="/Home/GamesReview">
+                    <div class="text">GAME REVIEW</div>
+                </a>
+            </div>
+        </div>
+
+        @*Developer Image*@
+        <div class="container2">
+            <img src="~/Images/Game Developer.jpg" class="image2" alt="Developers Image" />
+            <div class="overlay2">
+                <a href="/Home/Developers">
+                    <div class="text2">DEVELOPERS</div>
+                </a>
+            </div>
+        </div>
+
+        @*League Table Image*@
+        <div class="container3">
+            <img src="~/Images/League Table.jpg" class="image3" alt="League Table Image" />
+            <div class="overlay3">
+                <a href="/Home/LeagueTable">
+                    <div class="text3">LEAGUE TABLE </div>
+                </a>
+            </div>
+        </div>
+    </form>
+</nav>
+

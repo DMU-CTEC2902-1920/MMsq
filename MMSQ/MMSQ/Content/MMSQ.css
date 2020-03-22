@@ -1,0 +1,161 @@
+﻿/* Body Appearance*/
+body {
+    background:lightgrey;
+    color:black;
+}
+
+#Search
+{
+    position:absolute; 
+    top:70px;
+    left:600px;
+}
+
+
+
+/*Game Review Image*/
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    width: 300px;
+    height: 200px;
+    margin-left: 250px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.overlay {
+
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    left: 265px;
+    right: 0;
+    height: 200px;
+    width: 300px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.container:hover .overlay {
+    opacity: 0.8;
+}
+
+.text {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*Developers Image*/
+.container2 {
+    position: relative;
+    width: 50%;
+}
+
+.image2 {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left:-150px;
+    top:-100px;
+
+}
+
+.overlay2 {
+    position: absolute;
+    top: -100px;
+    bottom: 0;
+    left: -150px;
+    right: 0;
+    height: 200px;
+    width: 300px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.container2:hover .overlay2 {
+    opacity: 0.8;
+}
+
+.text2 {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/*League Table Image*/
+.container3 {
+    position: relative;
+    width: 50%;
+}
+
+.image3 {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 900px;
+    top: -400px;
+}
+
+
+.overlay3 {
+    position: absolute;
+    top: -400px;
+    bottom: 0;
+    left: 900px;
+    right: 0;
+    height: 200px;
+    width: 300px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.container3:hover .overlay3 {
+    opacity: 0.8;
+}
+
+.text3 {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* FOOTER */
+
+.footer-links 
+{
+    text-align: center;
+    color:grey;
+}
+
+.CompName {
+    text-align: center;
+    
+}
+
