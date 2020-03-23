@@ -224,17 +224,31 @@ body {
     font-weight: normal;
 }*/
 
+
 /* ABOUT PAGE */
-.About 
-{
-    text-align: center;
+.About {
+    text-align: justify;
     font-size: 20px;
     position: absolute;
     top: 200px;
 }
-
-.ContactUs {
+/* CONTACT US PAGE */
+.ContactUs 
+{
     font-size: 20px;
     position: absolute;
     top: 130px;
+}
+
+/* FAQ/HELP PAGE */
+.FAQ {
+    position: absolute;
+    top: 130px;
+}
+/* TERMS AND CONDITIONS PAGE */
+.TC {
+    position: absolute;
+    top: 130px;
+    height: 4300px;
+    text-align: justify;
 }

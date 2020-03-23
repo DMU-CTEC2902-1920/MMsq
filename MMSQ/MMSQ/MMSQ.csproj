@@ -204,6 +204,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\brick.jpg" />
+    <Content Include="Images\ContactUs.jpg" />
     <Content Include="Images\Game Developer.jpg" />
     <Content Include="Images\Game Developer.png" />
     <Content Include="Images\Games Review.jpg" />
@@ -368,6 +369,7 @@
     <Content Include="Views\Home\SearchResult.cshtml" />
     <Content Include="Views\Home\UnderConstruction.cshtml" />
     <Content Include="Views\Home\TermsAndConditions.cshtml" />
+    <Content Include="Views\Home\FAQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
