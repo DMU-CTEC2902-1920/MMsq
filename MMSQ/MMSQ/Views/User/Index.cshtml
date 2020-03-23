@@ -1,0 +1,62 @@
+﻿@model MMSQ.Models.clsUser
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    View User <span class="badge badge-primary"> @Model.UserID </span>
+</h2>
+
+    <!-- USER DETAILS PAGE-->
+<div class="card">
+    <div class="card-header">
+        <h2 class="card-title">
+            <a data-toggle="collapse" href="#userInfo"> User Details <span class=""></span></a>
+        </h2>
+    </div>
+
+    <!--USER DETAILS-->
+    <div id="userInfo" class="collapse">
+        <div class="card-body">
+            @Html.HiddenFor(o => o.UserID)
+            <p><strong>Username: </strong> @Model.User_Username</p>
+            <p><strong>Password: </strong> @Model.User_Password</p>
+            <p><strong>Firstname: </strong>@Model.User_Firstname</p>
+            <p><strong>Telephone: </strong> @Model.User_Telephone</p>
+            <p><strong>Email: </strong> @Model.User_Email</p>
+            <p><strong>Date Of Birth: </strong> @Model.User_DateOfBirth</p>
+            <p><strong>Account Status: </strong> @Model.User_AccountStatus</p>
+
+        </div>
+    </div>
+</div>
+
+<!-- GAME REVIEWS SUBMISSION-->
+<h2>
+    Game Reviews Submitted
+</h2>
+
+<div class="card">
+    <div class="card-body">
+        <table class="table table-striped">
+            <tr>
+                <!-- Table Heading Attributes-->
+                <th>Review ID</th>
+                <th>Game Title</th>
+                <th>Review Description</th>
+                <th>Review Status</th>
+            </tr>
+            @foreach (var review in @Model.GameReview)
+            {
+                <tr>
+                    <!--Game Review Data Per Row-->
+                    <td>@review.ReviewID</td>
+                    <td><a href="~/Views/Home/Index.cshtml">@review.Review_GameTitle</a></td>
+                    <td>@review.Review_ReviewDescription</td>
+                    <td>@review.Review_ReviewStatus</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
