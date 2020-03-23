@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Home Page";
 
     <!-- CSS Links-->
@@ -9,24 +10,24 @@
 
 }
 
- @*Redirect Search Button To A Specific Page*@
-<script type="text/javascript">
-    function redirect() {
-        window.location = "http://www.google.com/"
-    }
-</script>
+    <!--Redirect Search Button To A Specific Page-->
+    <script type="text/javascript">
+        function redirect() {
+            window.location = "http://www.google.com/"
+        }
+    </script>
 
 <!-- HOME PAGE -->
 <!-- Home Page Container-->
 <nav class="navbar navbar-light bg-light" style="width:1500px; margin-left:-280px;">
-    <form class="form-inline" style="background:#b8b9ba; width:1500px; ">
+    <form class="form-inline" style="background:#9f9f9f; width:1500px; ">
 
         @*Search Bar Test
         @using (Html.BeginForm("SearchResult", "Home", FormMethod.Post))
         {
 
             <<div id="Search">
-                
+
                 Search:<br>
                 <input type="text" id="SearchQuery" name="SearchQuery" style="width:1500px; height:30px;">>
                 <input type="submit" id="submitId" value="submit" />
@@ -44,10 +45,12 @@
             }
         }*@
 
-         <!--Search Bar-->
+
+
+        @*Search Bar*@
         <div id="Search">
             <input type="text" placeholder="Search" name="search" style="width:1500px; height:30px;">
-            <!--Redirect Search Button-->
+            @*Redirect Search Button*@
             <input type="button" onclick="redirect()" value="Search">
         </div>
 
