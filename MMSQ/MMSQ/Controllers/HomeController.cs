@@ -59,5 +59,11 @@ namespace MMSQ.Controllers
         {
             return View();
         }
+
+        public ActionResult TermsAndConditions()
+        {
+            ViewBag.Message = "Our Terms and Conditions";
+            return View();
+        }
     }
 }
