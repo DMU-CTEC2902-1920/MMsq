@@ -11,8 +11,6 @@ body {
     left:600px;
 }
 
-
-
 /*Game Review Image*/
 .container {
     position: relative;
@@ -211,3 +209,18 @@ body {
     line-height: 30px;
     font-weight: normal;
 }*/
+
+/* ABOUT PAGE */
+.About 
+{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 200px;
+}
+
+.ContactUs {
+    font-size: 20px;
+    position: absolute;
+    top: 130px;
+}
