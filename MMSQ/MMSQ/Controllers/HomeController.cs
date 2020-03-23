@@ -65,5 +65,13 @@ namespace MMSQ.Controllers
             ViewBag.Message = "Our Terms and Conditions";
             return View();
         }
+
+        public ActionResult FAQ()
+        {
+            ViewBag.Message = "FAQ/HELP";
+
+            return View();
+        }
+
     }
 }
