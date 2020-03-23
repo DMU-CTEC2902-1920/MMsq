@@ -10,14 +10,14 @@ namespace MMSQ.Models
     {
         //Developer Properties
         [Required]
-        public int DeveloperID { get; set; }
+        public virtual int DeveloperID { get; set; }
 
         [Required]
         [MinLength(2)][MaxLength(50)]
-        public string Developer_DeveloperName { get; set; }
+        public virtual string Developer_DeveloperName { get; set; }
 
         [Required]
-        public int Developer_GamesProduced { get; set; }
+        public virtual int Developer_GamesProduced { get; set; }
     }
 
     //Filter Method

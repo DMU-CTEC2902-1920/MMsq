@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<MMSQ.Models.clsDeveloper>
+
 @{
     ViewBag.Title = "Developers";
     <!-- CSS Links-->
@@ -8,4 +9,31 @@
 
 <!-- DEVELOPERS PAGE-->
 
-<p> DEVELOPERS</p>
+<p> DEVELOPERS </p>
+
+<p>
+    @Html.ActionLink("Add Developer", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>Developer Name</th>
+        <th>Games Produced </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @Html.DisplayFor(modelItem => item.DeveloperID) </td>
+            <td> @Html.DisplayFor(modelItem => item.Developer_DeveloperName) </td>
+            <td> <a href="~/Home/Index">@Html.DisplayFor(modelItem => item.Developer_GamesProduced)</a></td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+</table>
+
