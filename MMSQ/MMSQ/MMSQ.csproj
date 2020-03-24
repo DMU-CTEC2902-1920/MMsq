@@ -167,6 +167,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -182,10 +183,12 @@
     <Compile Include="Models\clsDeveloperCollection.cs" />
     <Compile Include="Models\clsGame.cs" />
     <Compile Include="Models\clsGameCollection.cs" />
+    <Compile Include="Models\clsGenre.cs" />
     <Compile Include="Models\clsReview.cs" />
     <Compile Include="Models\clsReviewCollection.cs" />
     <Compile Include="Models\clsUser.cs" />
     <Compile Include="Models\clsUserCollection.cs" />
+    <Compile Include="Models\GameContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -353,7 +356,6 @@
     <Content Include="Views\Home\GamesReview.cshtml">
       <BrowseToURL>~/Home/GamesReview</BrowseToURL>
     </Content>
-    <Content Include="Views\Home\Developers.cshtml" />
     <Content Include="Views\Home\LeagueTable.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
@@ -370,6 +372,11 @@
     <Content Include="Views\Home\UnderConstruction.cshtml" />
     <Content Include="Views\Home\TermsAndConditions.cshtml" />
     <Content Include="Views\Home\FAQHELP.cshtml" />
+    <Content Include="Views\Games\Create.cshtml" />
+    <Content Include="Views\Games\Delete.cshtml" />
+    <Content Include="Views\Games\Details.cshtml" />
+    <Content Include="Views\Games\Edit.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

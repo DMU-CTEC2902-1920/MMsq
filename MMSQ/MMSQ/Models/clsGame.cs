@@ -8,46 +8,53 @@ namespace MMSQ.Models
 {
     public class clsGame
     {
+        [Key]
         //Game Properties
         [Required]
-        public int GameID { get; set; }
+        public virtual int GameID { get; set; }
 
         [Required]
-        public virtual int DeveloperID { get; set; }
+        public virtual int GenreID { get; set; }
 
-        [Required]
-        public virtual int UserID { get; set; }
 
-        [Required]
-        public virtual int ReviewID { get; set; }
+        //[Required]
+        //[MinLength(3)][MaxLength(50)]
+        //public virtual string Genre_Name { get; set; }
 
-        [Required]
-        public virtual int CommentID { get; set; }
+        //[Required]
+        //public virtual int DeveloperID { get; set; }
+
+        //[Required]
+        //public virtual int UserID { get; set; }
+
+        //[Required]
+        //public virtual int ReviewID { get; set; }
+
+        //[Required]
+        //public virtual int CommentID { get; set; }
 
         [Required]
         [MinLength(2)][MaxLength(50)]
         public string Game_GameTitle { get; set; }
 
-        [Required]
-        [MinLength(2)][MaxLength(55)]
-        public string Game_Genre { get; set; }
+
 
         [Required]
         [MinLength(2)][MaxLength(3)]
-        public string Game_AgeRestriction { get; set; }
+        public virtual string Game_AgeRestriction { get; set; }
 
         [Required]
-        public bool Game_Multiplayer { get; set; }
+        public virtual bool Game_Multiplayer { get; set; }
 
         [Required]
         [MinLength(2)][MaxLength(55)]
-        public string Game_Platform { get; set; }
+        public virtual string Game_Platform { get; set; }
 
         [Required]
-        public DateTime Game_ReleaseDate { get; set; }
+        public virtual DateTime Game_ReleaseDate { get; set; }
 
         [Required]
-        public int Game_Score { get; set; }
+        public virtual int Game_Score { get; set; }
     }
 
 
