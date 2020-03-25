@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using MMSQ.Data.Model;
 using MMSQ.Models;
 
 namespace MMSQ.Controllers
@@ -46,7 +47,7 @@ namespace MMSQ.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "GameID,GenreID,Game_GameTitle,Game_AgeRestriction,Game_Multiplayer,Game_Platform,Game_ReleaseDate,Game_Score")] clsGame clsGame)
+        public ActionResult Create([Bind(Include = "GameID,GenreID,Genre_Name,Game_GameTitle,Game_AgeRestriction,Game_Multiplayer,Game_Platform,Game_ReleaseDate,Game_Score")] clsGame clsGame)
         {
             if (ModelState.IsValid)
             {
@@ -70,7 +71,6 @@ namespace MMSQ.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.GenreID = new SelectList(db.clsGenres, "GenreID", "Genre_Name", clsGame.GenreID);
             return View(clsGame);
         }
 
@@ -79,7 +79,7 @@ namespace MMSQ.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "GameID, GenreID, GameTitle, AgeRestriction, Multiplayer, Platform, ReleaseDate, Score")] clsGame clsGame)
+        public ActionResult Edit([Bind(Include = "GameID,GenreID,Genre_Name,Game_GameTitle,Game_AgeRestriction,Game_Multiplayer,Game_Platform,Game_ReleaseDate,Game_Score")] clsGame clsGame)
         {
             if (ModelState.IsValid)
             {

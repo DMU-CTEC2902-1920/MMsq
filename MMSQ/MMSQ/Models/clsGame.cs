@@ -16,28 +16,13 @@ namespace MMSQ.Models
         [Required]
         public virtual int GenreID { get; set; }
 
-
-        //[Required]
-        //[MinLength(3)][MaxLength(50)]
-        //public virtual string Genre_Name { get; set; }
-
-        //[Required]
-        //public virtual int DeveloperID { get; set; }
-
-        //[Required]
-        //public virtual int UserID { get; set; }
-
-        //[Required]
-        //public virtual int ReviewID { get; set; }
-
-        //[Required]
-        //public virtual int CommentID { get; set; }
+        [Required]
+        [MinLength(3)][MaxLength(55)]
+        public virtual string Genre_Name { get; set; }
 
         [Required]
         [MinLength(2)][MaxLength(50)]
         public string Game_GameTitle { get; set; }
-
-
 
         [Required]
         [MinLength(2)][MaxLength(3)]
@@ -57,6 +42,21 @@ namespace MMSQ.Models
         public virtual int Game_Score { get; set; }
     }
 
+        //[Required]
+        //[MinLength(3)][MaxLength(50)]
+        //public virtual string Genre_Name { get; set; }
+
+        //[Required]
+        //public virtual int DeveloperID { get; set; }
+
+        //[Required]
+        //public virtual int UserID { get; set; }
+
+        //[Required]
+        //public virtual int ReviewID { get; set; }
+
+        //[Required]
+        //public virtual int CommentID { get; set; }
 
     //Filter Method
     //public bool Filter(int GameID)
