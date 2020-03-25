@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace MMSQ.Models
+namespace MMSQ.Data.Model
 {
     public class GameContext : DbContext
     {
@@ -19,7 +19,6 @@ namespace MMSQ.Models
         {
         }
 
-        public DbSet<clsGame> clsGames { get; set; }
-        public DbSet<clsGenre> clsGenres { get; set; }
+        public DbSet<Models.clsGame> clsGames { get; set; }
     }
 }
