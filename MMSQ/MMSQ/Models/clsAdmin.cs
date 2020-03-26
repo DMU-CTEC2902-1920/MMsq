@@ -34,16 +34,4 @@ namespace MMSQ.Models
         [MinLength(11)][MaxLength(13)]
         public string Admin_Telephone { get; set; }
     }
-
-    //Filter Method
-    //public bool Filter(int AdminID)
-    //{
-
-    //}
-
-    //Validation Method
-    //public string Valid(string Admin_Firstname, string Admin_Lastname. string Amdin_Gender, string Admin_Email, string Admin_Password, string Admin_Telephone)
-    //{
-    //    return "";
-    //}
 }

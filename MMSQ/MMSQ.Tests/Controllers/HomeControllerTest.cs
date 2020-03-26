@@ -35,7 +35,7 @@ namespace MMSQ.Tests.Controllers
             ViewResult result = controller.About() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.AreEqual("About Us", result.ViewBag.Message);
         }
 
         [TestMethod]
@@ -49,6 +49,98 @@ namespace MMSQ.Tests.Controllers
 
             // Assert
             Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void UnderConstruction()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.UnderConstruction() as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void TermsAndConditions()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.TermsAndConditions() as ViewResult;
+
+            // Assert
+            Assert.AreEqual("Our Terms and Conditions", result.ViewBag.Message);
+        }
+
+        [TestMethod]
+        public void FAQHELP()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.FAQHELP() as ViewResult;
+
+            // Assert
+            Assert.AreEqual("FAQ/HElP", result.ViewBag.Message);
+        }
+
+        [TestMethod]
+        public void Action()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.Action() as ViewResult;
+
+            // Assert
+            Assert.AreEqual("ActionGames", result.ViewBag.Message);
+        }
+
+        [TestMethod]
+        public void Sport()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.Sport() as ViewResult;
+
+            // Assert
+            Assert.AreEqual("SportGames", result.ViewBag.Message);
+        }
+
+
+        [TestMethod]
+        public void FPS()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.FPS() as ViewResult;
+
+            // Assert
+            Assert.AreEqual("FPS", result.ViewBag.Message);
+        }
+
+        [TestMethod]
+        public void Developer()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.Developer() as ViewResult;
+
+            // Assert
+            Assert.AreEqual("Developer", result.ViewBag.Message);
         }
     }
 }
