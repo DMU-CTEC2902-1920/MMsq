@@ -1,0 +1,63 @@
+﻿@model IEnumerable<MMSQ.Models.clsReview>
+
+@{
+    ViewBag.Title = "Review";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <!-- CSS Links-->
+    @Styles.Render("~/Content/MMSQ.css")
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Review List</title>
+</head>
+<body>
+    <p style="position:absolute; left:-30px; top:85px; font-weight:bold; border:1px black solid; padding-left:10px; padding-right:10px;">
+        @Html.ActionLink("Add New Review", "Create")
+    </p> 
+    <p style="position:absolute; left:790px; top:85px; font-weight:bold; border:1px black solid; padding-left:10px; padding-right:10px;">
+        @Html.ActionLink("Top Critics Reviews", "ReviewsByGame")
+     </p>
+
+        <!-- Games List -->
+        <table class="table" style="text-align:center; position:absolute; left:-30px; top:130px; width:1000px; height:300px;">
+            description
+            <tr style="text-align:center;">
+                <th>
+                    Game Title
+                </th>
+                <th>
+                    Review Description
+                </th>
+                <th>
+                    Review Score
+                </th>
+                <th>
+                    Review Status
+                </th>
+            </tr>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Review_GameTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Review_ReviewDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Review_Score)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Review_ReviewStatus)
+                    </td>
+                </tr>
+            }
+        </table>
+</body>
+</html>
