@@ -19,16 +19,4 @@ namespace MMSQ.Models
         [Required]
         public virtual int Developer_GamesProduced { get; set; }
     }
-
-    //Filter Method
-    //public bool Filter(int DeveloperID)
-    //{
-
-    //}
-
-    //Validation Method
-    //public string Valid(string Developer_DeveloperName, string Developer_GamesProduced)
-    //{
-    //    return "";
-    //}
 }

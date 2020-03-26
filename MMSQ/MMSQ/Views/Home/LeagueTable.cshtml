@@ -4,8 +4,142 @@
     <!-- CSS Links-->
     @Styles.Render("~/Content/MMSQ.css")
 }
-<h2>@ViewBag.Title.</h2>
-<br />
-<h3 style="text-align:center;"> League Table </h3>
 
 <!-- LEAGUE TABLE PAGE-->
+
+<table class="table" style="text-align:center; position:absolute; left:-30px; top:25px; width:1000px; height:300px;">
+
+    <tr style="text-align:center;">
+        <th>
+            Rank
+        </th>
+        <th>
+            Game Title
+        </th>
+        <th>
+            Game Score
+        </th>
+    </tr>
+    <tr>
+        <td>
+            1st
+        </td>
+        <td>
+            Call Of Duty MW
+        </td>
+        <td>
+            9.8/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2nd
+        </td>
+        <td>
+            Minecraft
+        </td>
+        <td>
+            9.4/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3rd
+        </td>
+        <td>
+            Rainbow Six Siege
+        </td>
+        <td>
+            8.7/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            4th
+        </td>
+        <td>
+            Wii Sports
+        </td>
+        <td>
+            8.4/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            5th
+        </td>
+        <td>
+            God Of War
+        </td>
+        <td>
+            8.1/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            6th
+        </td>
+        <td>
+            Red Dead Redemeption
+        </td>
+        <td>
+            7.8/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            7th
+        </td>
+        <td>
+            Fortnite
+        </td>
+        <td>
+            7.5/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            8th
+        </td>
+        <td>
+            FIFA 19
+        </td>
+        <td>
+            7.1/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            9th
+        </td>
+        <td>
+            Control
+        </td>
+        <td>
+            7/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            10th
+        </td>
+        <td>
+            Mortal Kombat
+        </td>
+        <td>
+            6/10
+        </td>
+    </tr>
+</table>
+
+<p id="action" style="position:absolute; text-align:center; top:100px; left:-250px;"> Genre: <br /><br />
+    <a href="/Home/Action" class="btn btn-info" role="button">Action</a>
+</p>
+
+<p id="action" style="position:absolute; text-align:center; top:225px; left:-250px;">
+    <a href="/Home/Sport" class="btn btn-info" role="button">Sport</a>
+</p>
+
+<p id="action" style="position:absolute; text-align:center; top:325px; left:-250px;">
+    <a href="/Home/FPS" class="btn btn-info" role="button"> FPS </a>
+</p>

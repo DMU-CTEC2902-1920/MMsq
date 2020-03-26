@@ -52,18 +52,4 @@ namespace MMSQ.Models
 
         public List<clsReview> GameReview { get; set; }
     }
-
-    //Filter Method
-    //public bool Filter(int UserID)
-    //{
-     
-    //}
-    
-    //Validation Method
-    //public string Valid(string User_Username, string User_Password, string User_Firstname, string User_Lastname, string User_Gender, string User_Telephone, string User_Email, string User_DateOfBirth, string User_AccountStatus)
-    //{
-    //    return "";
-    //}
-
-
 }

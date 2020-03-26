@@ -186,6 +186,7 @@
     <Compile Include="Models\clsGame.cs" />
     <Compile Include="Models\clsGameCollection.cs" />
     <Compile Include="Models\clsGenre.cs" />
+    <Compile Include="Models\clsLeagueTable.cs" />
     <Compile Include="Models\clsReview.cs" />
     <Compile Include="Models\clsReviewCollection.cs" />
     <Compile Include="Models\clsUser.cs" />
@@ -366,7 +367,6 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\SearchResult.cshtml" />
     <Content Include="Views\Home\UnderConstruction.cshtml" />
     <Content Include="Views\Home\TermsAndConditions.cshtml" />
     <Content Include="Views\Home\FAQHELP.cshtml" />
@@ -378,6 +378,11 @@
     <Content Include="Views\Games\Games.cshtml" />
     <Content Include="Views\Review\Create.cshtml" />
     <Content Include="Views\Review\ReviewsByGame.cshtml" />
+    <Content Include="Views\LeagueTable\LeagueList.cshtml" />
+    <Content Include="Views\Home\Action.cshtml" />
+    <Content Include="Views\Home\Sport.cshtml" />
+    <Content Include="Views\Home\FPS.cshtml" />
+    <Content Include="Views\Home\Developer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

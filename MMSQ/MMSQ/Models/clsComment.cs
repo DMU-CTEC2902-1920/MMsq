@@ -22,16 +22,4 @@ namespace MMSQ.Models
         [Required]
         public virtual int UserID { get; set; }
     }
-
-    //Filter Method
-    //public bool Filter(int CommentID)
-    //{
-
-    //}
-
-    //Validation Method
-    //public string Valid(string Comment_CommentDescription, string Comment_CommentStatus)
-    //{
-    //    return "";
-    //}
 }
