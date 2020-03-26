@@ -40,33 +40,16 @@ namespace MMSQ.Models
 
         [Required]
         public virtual int Game_Score { get; set; }
+
+        [Required]
+        [MinLength(2)][MaxLength(5000)]
+        public virtual string Game_Description { get; set; }
+
+        [Required]
+        [MinLength(2)][MaxLength(2000)]
+        public virtual string Game_Trailer { get; set; }
+
+        public List<clsReview> Reviews { get; set; }
+
     }
-
-        //[Required]
-        //[MinLength(3)][MaxLength(50)]
-        //public virtual string Genre_Name { get; set; }
-
-        //[Required]
-        //public virtual int DeveloperID { get; set; }
-
-        //[Required]
-        //public virtual int UserID { get; set; }
-
-        //[Required]
-        //public virtual int ReviewID { get; set; }
-
-        //[Required]
-        //public virtual int CommentID { get; set; }
-
-    //Filter Method
-    //public bool Filter(int GameID)
-    //{
-
-    //}
-
-    //Validation Method
-    //public string Valid(string Game_GameTitle, string Game_Genre, string Game_AgeRestriction, string Game_Multiplayer, string Game_Platform, string Game_ReleaseDate, string Game_Score)
-    //{
-    //    return "";
-    //}
 }

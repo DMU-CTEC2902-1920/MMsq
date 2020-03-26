@@ -22,34 +22,10 @@
 <nav class="navbar navbar-light bg-light" style="width:1500px; margin-left:-280px;">
     <form class="form-inline" style="background:#9f9f9f; width:1500px; ">
 
-        @*Search Bar Test
-        @using (Html.BeginForm("SearchResult", "Home", FormMethod.Post))
-        {
-
-            <<div id="Search">
-
-                Search:<br>
-                <input type="text" id="SearchQuery" name="SearchQuery" style="width:1500px; height:30px;">>
-                <input type="submit" id="submitId" value="submit" />
-
-            </div>
-
-        }
-
-        @{
-            if (ViewBag.SearchKey != null)
-            {
-                <span>
-                    Search Key: @ViewBag.SearchKey
-                </span>
-            }
-        }*@
-
-
 
         @*Search Bar*@
         <div id="Search">
-            <input type="text" placeholder="Search" name="search" style="width:1500px; height:30px;">
+            <input type="text" placeholder=" Search" name="search" style="width:1500px; height:30px;">
             @*Redirect Search Button*@
             <input type="button" onclick="redirect()" value="Search">
         </div>
@@ -58,7 +34,7 @@
         <div class="container">
             <img src="~/Images/Games Review.jpg" class="image" alt="Games Review Image" />
             <div class="overlay">
-                <a href="/Home/GamesReview">
+                <a href="/Games/Games">
                     <div class="text">GAME REVIEW</div>
                 </a>
             </div>
