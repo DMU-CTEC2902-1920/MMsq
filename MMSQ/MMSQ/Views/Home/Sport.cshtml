@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Sport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <!-- CSS Links-->
+    @Styles.Render("~/Content/MMSQ.css")
+}
+
+<h4 style="position:absolute; text-align:center; top:55px; left:290px;"> Top Rated Sports Games</h4>
+<table class="table" style="text-align:center; position:absolute; left:-30px; top:100px; width:1000px; height:300px;">
+
+    <tr style="text-align:center;">
+        <th>
+            Rank
+        </th>
+        <th>
+            Game Title
+        </th>
+        <th>
+            Game Score
+        </th>
+    </tr>
+    <tr>
+        <td>
+            1st
+        </td>
+        <td>
+            NBA 2K20
+        </td>
+        <td>
+            9.3/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2nd
+        </td>
+        <td>
+            Madden NFL 20
+        </td>
+        <td>
+            8.5/10
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3rd
+        </td>
+        <td>
+            FIFA 20
+        </td>
+        <td>
+            4.3/10
+        </td>
+    </tr>
+</table>
+
+<p id="action" style="position:absolute; text-align:center; top:625px; left:-250px;">
+    <a href="/Home/LeagueTable" class="btn btn-info" role="button"> Back </a>
+</p>

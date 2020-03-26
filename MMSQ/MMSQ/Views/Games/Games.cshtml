@@ -1,0 +1,98 @@
+﻿@model IEnumerable<MMSQ.Models.clsGame>
+
+@{
+    ViewBag.Title = "Games";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <!-- CSS Links-->
+    @Styles.Render("~/Content/MMSQ.css")
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Games List</title>
+</head>
+<body>
+    <p style="position:absolute; left:-420px; top:75px; font-weight:bold; border:1px black solid; padding-left:10px; padding-right:10px;">
+        @Html.ActionLink("Add New Game", "Create")
+    </p>
+    <!-- Games List -->
+    <table class="table" style="text-align:left; position:absolute; left:-430px; top:120px; width:2000px; height:1000px;">
+        description
+        <tr style="text-align:left;">
+            <th>
+                Genre
+            </th>
+            <th>
+                Game Title
+            </th>
+            <th>
+                Age Restriction
+            </th>
+            <th>
+                Multiplayer
+            </th>
+            <th>
+                Platform
+            </th>
+            <th>
+                Release Date
+            </th>
+            <th>
+                Score
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Trailer
+            </th>
+        </tr>
+        
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.HiddenFor(modelItem => item.GenreID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game_GameTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game_AgeRestriction)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game_Multiplayer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game_Platform)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game_ReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game_Score)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game_Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Game_Trailer)
+                </td>
+                <td style="width:400px;">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.GameID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.GameID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.GameID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
