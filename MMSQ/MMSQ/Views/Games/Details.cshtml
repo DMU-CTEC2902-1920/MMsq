@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     <!-- CSS Links-->
     @Styles.Render("~/Content/MMSQ.css")
-
 }
 
 <h2>Details</h2>
@@ -25,8 +24,8 @@
         </dd>
 
         <dt>
-            @* @Html.DisplayNameFor(model => model.Genre_Name)*@
-            Genre
+            @*@Html.DisplayNameFor(model => model.Genre_Name)*@
+            Genre Name
         </dt>
 
         <dd>
@@ -34,7 +33,7 @@
         </dd>
 
         <dt>
-           @* @Html.DisplayNameFor(model => model.Game_GameTitle)*@
+            @*@Html.DisplayNameFor(model => model.Game_GameTitle)*@
             Game Title
         </dt>
 
@@ -61,7 +60,7 @@
         </dd>
 
         <dt>
-           @* @Html.DisplayNameFor(model => model.Game_Platform)*@
+            @* @Html.DisplayNameFor(model => model.Game_Platform)*@
             Platform
         </dt>
 
@@ -70,7 +69,7 @@
         </dd>
 
         <dt>
-           @* @Html.DisplayNameFor(model => model.Game_ReleaseDate)*@
+            @* @Html.DisplayNameFor(model => model.Game_ReleaseDate)*@
             Release Date
         </dt>
 
@@ -87,9 +86,27 @@
             @Html.DisplayFor(model => model.Game_Score)
         </dd>
 
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Game_Description)*@
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game_Description)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Game_Trailer)*@
+            Trailer
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Game_Trailer)
+        </dd>
+
     </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.GameID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Games")
 </p>

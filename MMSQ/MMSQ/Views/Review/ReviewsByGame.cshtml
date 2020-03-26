@@ -1,0 +1,395 @@
+﻿@model MMSQ.Models.clsGame
+    @{
+        ViewBag.Title = "ReviewsByGame";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+        //CSS Links
+        @Styles.Render("~/Content/MMSQ.css")
+    }
+
+    <h2>
+        View Game <span class="badge badge-primary"> @Model.GameID </span>
+    </h2>
+
+ @*REVIEWS DETAILS PAGE*@
+ @*FIFA 19 REVIEW*@
+    <div class="FIFA">
+        <div class="FIFA-header">
+            <br />
+            <h2 class="FIFA-title">
+                <a data-toggle="collapse" href="#FIFAInfo"> FIFA 19 Reviews <span class=""></span></a>
+            </h2>
+        </div>
+    </div>
+
+   @* FIFA 19 DETAILS*@
+    <div id="FIFAInfo" class="collapse">
+        <div class="FIFA-body">
+            @Html.HiddenFor(o => o.GameID)
+            <p><strong>Genre ID: </strong> @Model.GenreID</p>
+            <p><strong>Genre: </strong>@Model.Genre_Name</p>
+            <p><strong>Game Title: </strong> @Model.Game_GameTitle</p>
+            <p><strong>Age Restriction: </strong> @Model.Game_AgeRestriction</p>
+            <p><strong>Multiplayer: </strong> @Model.Game_Multiplayer</p>
+            <p><strong>Platform: </strong> @Model.Game_Platform</p>
+            <p><strong>Release Date: </strong> @Model.Game_ReleaseDate</p>
+            <p><strong>Score: </strong> @Model.Game_Score</p>
+            <p><strong>Description: </strong> @Model.Game_Description</p>
+            <p><strong>Trailer: </strong> @Model.Game_Trailer</p>
+        </div>
+
+         @*FIFA 19 REVIEWS SUBMISSION*@
+        <br />
+        <div class="FIFA">
+            <div class="FIFA-body">
+                <table class="table table-striped">
+                    <tr>
+                         Table Heading Attributes
+                        <th>Review ID</th>
+                        <th>Game Title</th>
+                        <th>Review Description</th>
+                        <th>Review Score</th>
+                        <th>Review Status</th>
+                    </tr>
+                    @foreach (var review in @Model.Reviews)
+                    {
+                        <tr>
+                            @*FIFA 19 Review Data Per Row*@
+                            <td>@review.ReviewID</td>
+                            <td><a href="/Home/Index">@review.Review_GameTitle</a></td>
+                            <td>@review.Review_ReviewDescription</td>
+                            <td>Review Score</td>
+                            <td>@review.Review_ReviewStatus</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+
+     @*NBA 2K20 DETAILS PAGE*@
+    <div class="NBA">
+        <div class="NBA-header">
+            <br />
+            <h2 class="NBA-title">
+                <a data-toggle="collapse" href="#NBAInfo"> NBA 2K20 Reviews <span class=""></span></a>
+            </h2>
+        </div>
+    </div>
+
+    @*NBA DETAILS*@
+    <div id="NBAInfo" class="collapse">
+        <div class="NBA-body">
+            @Html.HiddenFor(o => o.GameID)
+            <p><strong>Genre ID: </strong> 1 </p>
+            <p><strong>Genre: </strong> Sports </p>
+            <p><strong>Game Title: </strong> NBA 2K20 </p>
+            <p><strong>Age Restriction: </strong> 11 </p>
+            <p><strong>Multiplayer: </strong> True </p>
+            <p><strong>Platform: </strong> PS4 </p>
+            <p><strong>Release Date: </strong> 06/09/2019 </p>
+            <p><strong>Score: </strong> 6 </p>
+            <p><strong>Description: </strong> NBA 2K20 is a basketball simulation game which, like the previous games in the series, strives to realistically depict the National Basketball Association (NBA), as well as present improvements over the previous installments.</p>
+            <p><strong>Trailer: </strong> https://www.youtube.com/watch?v=Df-oyJL9Gy4 </p>
+        </div>
+
+         @*NBA REVIEWS SUBMISSION*@
+        <br />
+        <div class="NBA">
+            <div class="NBA-body">
+                <table class="table table-striped">
+                    <tr>
+                         @*Table Heading Attributes*@
+                        <th>Review ID</th>
+                        <th>Game Title</th>
+                        <th>Review Description</th>
+                        <th>Review Score</th>
+                        <th>Review Status</th>
+                    </tr>
+                    <tr>
+                        @*NBA 2K 20 Review Data Per Row*@
+                        <td>1</td>
+                        <td>NBA 2K20</td>
+                        <td>This is a sport simulator that has no rival in its genre: because of WNBA, gameplay improvements, audiovisual quality, cinematic style, depth of the modes.</td>
+                        <td>10</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>NBA 2K20</td>
+                        <td>NBA 2K20 remains a beautiful and satisfying title, but this time the loot box case heavily influences the final vote.</td>
+                        <td>7</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>NBA 2K20</td>
+                        <td>Overall, NBA 2K20 is still one of the best basketball games out there.</td>
+                        <td>9.5</td>
+                        <td>True</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    @* Wii Sports DETAILS PAGE*@
+    <div class="Wii">
+        <div class="Wii-header">
+            <br />
+            <h2 class="Wii-title">
+                <a data-toggle="collapse" href="#WiiInfo"> Wii Sports Reviews <span class=""></span></a>
+            </h2>
+        </div>
+    </div>
+
+    @*Wii Sports DETAILS*@
+    <div id="WiiInfo" class="collapse">
+        <div class="Wii-body">
+            @Html.HiddenFor(o => o.GameID)
+            <p><strong>Genre ID: </strong> 1 </p>
+            <p><strong>Genre: </strong> Sports </p>
+            <p><strong>Game Title: </strong> Wii Sports </p>
+            <p><strong>Age Restriction: </strong> 7+ </p>
+            <p><strong>Multiplayer: </strong> True </p>
+            <p><strong>Platform: </strong> Wii </p>
+            <p><strong>Release Date: </strong> 19/11/2006 </p>
+            <p><strong>Score: </strong> 4 </p>
+            <p><strong>Description: </strong> Wii Sports is available on its own as part of the Nintendo Selects collection of games. The game is a collection of five sports simulations, designed to demonstrate the motion-sensing capabilities of the Wii Remote. The five sports included are tennis, baseball, bowling, golf and boxing. </p>
+            <p><strong>Trailer: </strong> https://www.youtube.com/watch?v=AwGFcpGrCbw </p>
+        </div>
+
+         @*Wii REVIEWS SUBMISSION*@
+        <br />
+        <div class="Wii">
+            <div class="Wii-body">
+                <table class="table table-striped">
+                    <tr>
+                        @* Table Heading Attributes*@
+                        <th>Review ID</th>
+                        <th>Game Title</th>
+                        <th>Review Description</th>
+                        <th>Review Score</th>
+                        <th>Review Status</th>
+                    </tr>
+                    <tr>
+                        @*Wii Sports Review Data Per Row*@
+                        <td> 1 </td>
+                        <td> Wii Sports </td>
+                        <td>Wii Sports is an immersive, expansive active-play game that includes a dozen fun resort-themed activities.</td>
+                        <td>9</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td> Wii Sports </td>
+                        <td>Wii Sports, from the moment players skydive onto Wuhu Island,they're presented with a huge selection of fun activities that everyone can play...</td>
+                        <td>8.9</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td> Wii Sports </td>
+                        <td>Wii Sport is easy to pick up and play, but comes coupled with deeper levels of play that are sure to challenge even the most experienced gamers.</td>
+                        <td>7.5</td>
+                        <td>True</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+     @*Call Of Duty MW DETAILS PAGE*@
+    <div class="COD">
+        <div class="COD-header">
+            <br />
+            <h2 class="COD-title">
+                <a data-toggle="collapse" href="#CODInfo"> Call Of Duty MW Reviews <span class=""></span></a>
+            </h2>
+        </div>
+    </div>
+
+    <div id="CODInfo" class="collapse">
+        <div class="COD-body">
+            @Html.HiddenFor(o => o.GameID)
+            <p><strong>Genre ID: </strong> 2 </p>
+            <p><strong>Genre: </strong> FPS </p>
+            <p><strong>Game Title: </strong> Call Of Duty MW </p>
+            <p><strong>Age Restriction: </strong> 18 </p>
+            <p><strong>Multiplayer: </strong> True </p>
+            <p><strong>Platform: </strong> Xbox One </p>
+            <p><strong>Release Date: </strong> 	25/10/2019 </p>
+            <p><strong>Score: </strong> 8 </p>
+            <p><strong>Description: </strong> Call of Duty: Modern Warfare is a first-person shooter video game developed by Infinity Ward and published by Activision. ... The multiplayer mode supports cross-platform multiplayer and cross-platform progression for the first time in the series. </p>
+            <p><strong>Trailer: </strong> https://www.youtube.com/watch?v=J7Ivdq5E-fs </p>
+        </div>
+
+         @*Call Of Duty MW REVIEWS SUBMISSION*@
+        <br />
+        <div class="COD">
+            <div class="COD-body">
+                <table class="table table-striped">
+                    <tr>
+                        @*Table Heading Attributes*@
+                        <th>Review ID</th>
+                        <th>Game Title</th>
+                        <th>Review Description</th>
+                        <th>Review Score</th>
+                        <th>Review Status</th>
+                    </tr>
+                    <tr>
+                        @*Call Of Duty MW Review Data Per Row*@
+                        <td> 1 </td>
+                        <td> Call Of Duty MW </td>
+                        <td>Call of Duty: Modern Warfare puts the franchise back where it needs to be. You get a wonderful campaign, team-oriented spec ops, and a variety of multiplayer options that cater to those who love large and small scale warfare.</td>
+                        <td>9.2</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td> Call Of Duty MW </td>
+                        <td>A great campaign, excellent multiplayer modes and amazing graphics make this game worthy of its namesake. </td>
+                        <td>8.9</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td> Call Of Duty MW </td>
+                        <td>Call of Duty: Modern Warfare reboots the franchise with solid success throughout.</td>
+                        <td>10</td>
+                        <td>True</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    @*Rainbow Six Siege DETAILS PAGE*@
+    <div class="Six">
+        <div class="Six-header">
+            <br />
+            <h2 class="Six-title">
+                <a data-toggle="collapse" href="#SixInfo"> Rainbow Six Siege Reviews <span class=""></span></a>
+            </h2>
+        </div>
+    </div>
+
+    <div id="SixInfo" class="collapse">
+        <div class="Six-body">
+            @Html.HiddenFor(o => o.GameID)
+            <p><strong>Genre ID: </strong> 2 </p>
+            <p><strong>Genre: </strong> FPS </p>
+            <p><strong>Game Title: </strong> Rainbow Six Siege	 </p>
+            <p><strong>Age Restriction: </strong> 18 </p>
+            <p><strong>Multiplayer: </strong> True </p>
+            <p><strong>Platform: </strong> Xbox One </p>
+            <p><strong>Release Date: </strong> 	01/12/2015 </p>
+            <p><strong>Score: </strong> 10 </p>
+            <p><strong>Description: </strong> Tom Clancy's Rainbow Six Siege is a first-person shooter game, in which players utilize many different operators from the Rainbow team. ... An in-game shop allows players to purchase operators or cosmetics using the in-game currency, "Renown", which is earned at the end of matches from actions performed in-game.	</p>
+            <p><strong>Trailer: </strong> https://www.youtube.com/watch?v=KlbLLRdg9u8&t=1s </p>
+        </div>
+
+        @*Rainbow Six Siege REVIEWS SUBMISSION*@
+        <br />
+        <div class="Six">
+            <div class="Six-body">
+                <table class="table table-striped">
+                    <tr>
+                        @*Table Heading Attributes*@
+                        <th>Review ID</th>
+                        <th>Game Title</th>
+                        <th>Review Description</th>
+                        <th>Review Score</th>
+                        <th>Review Status</th>
+                    </tr>
+                    <tr>
+                        @*Rainbow Six Siege Review Data Per Row*@
+                        <td> 1 </td>
+                        <td> Rainbow Six Siege </td>
+                        <td>Despite its flaws, Rainbow Six: Siege has emerged as one of the strongest FPS titles of the year.</td>
+                        <td>8</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td> Rainbow Six Siege </td>
+                        <td>Super good game! It is very good and Ubisoft did a great job at reviving this game. </td>
+                        <td>9</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td> Rainbow Six Siege </td>
+                        <td>Tactical action with potential or one great game mode- but at the cost of the full game these are the two faces of the new Rainbow Six.</td>
+                        <td>4</td>
+                        <td>True</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    @*MINECRAFT DETAILS PAGE*@
+    <div class="MINECRAFT">
+        <div class="MINECRAFT-header">
+            <br />
+            <h2 class="MINECRAFT-title">
+                <a data-toggle="collapse" href="#MINECRAFTInfo"> MINECRAFT Reviews <span class=""></span></a>
+            </h2>
+        </div>
+    </div>
+
+    <div id="MINECRAFTInfo" class="collapse">
+        <div class="MINECRAFT-body">
+            @Html.HiddenFor(o => o.GameID)
+            <p><strong>Genre ID: </strong> 3 </p>
+            <p><strong>Genre: </strong> Action </p>
+            <p><strong>Game Title: </strong> Minecraft </p>
+            <p><strong>Age Restriction: </strong> 7+ </p>
+            <p><strong>Multiplayer: </strong> True </p>
+            <p><strong>Platform: </strong> Xbox 360 </p>
+            <p><strong>Release Date: </strong> 	17/05/2009 </p>
+            <p><strong>Score: </strong> 3 </p>
+            <p><strong>Description: </strong> Minecraft is a Lego style adventure game which has massively increased in popularity since it was released two years ago. It now has more than 33 million users worldwide. The video game puts players in a randomly-generated world where they can create their own structures and contraptions out of textured cubes. </p>
+            <p><strong>Trailer: </strong> https://www.youtube.com/watch?v=KlbLLRdg9u8&t=1s </p>
+        </div>
+
+        @*MINECRAFT REVIEWS SUBMISSION*@
+        <br />
+        <div class="MINECRAFT">
+            <div class="MINECRAFT-body">
+                <table class="table table-striped">
+                    <tr>
+                        @*Table Heading Attributes*@
+                        <th>Review ID</th>
+                        <th>Game Title</th>
+                        <th>Review Description</th>
+                        <th>Review Score</th>
+                        <th>Review Status</th>
+                    </tr>
+                    <tr>
+                         @*Minecraft Review Data Per Row*@
+                        <td> 1 </td>
+                        <td> Minecraft </td>
+                        <td> The game is truly a wonder of game-design. It features simple, intuitive, and interesting mechanics easily learned on the fly!! </td>
+                        <td>10</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td>Minecraft</td>
+                        <td> Minecraft is a masterpiece. A game that you must try. </td>
+                        <td>9.1</td>
+                        <td>True</td>
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td> Minecraft </td>
+                        <td>Minecraft is fun and very different experience from most games, but it finds itself in a very odd position however the game doesn't have much direction to it and while this is fun at first, the game gets progressively less fun when you get the hang of it </td>
+                        <td>3.7</td>
+                        <td>True</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>

@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     <!-- CSS Links-->
     @Styles.Render("~/Content/MMSQ.css")
-
 }
 
 <h2>Create</h2>
@@ -20,7 +19,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.GenreID, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.GenreID,"Genre ID", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.GenreID, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.GenreID, "", new { @class = "text-danger" })
@@ -28,7 +27,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Genre_Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Genre_Name, "Genre Name", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Genre_Name, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Genre_Name, "", new { @class = "text-danger" })
@@ -36,7 +35,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Game_GameTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Game_GameTitle, "Game Title", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Game_GameTitle, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Game_GameTitle, "", new { @class = "text-danger" })
@@ -44,7 +43,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Game_AgeRestriction, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Game_AgeRestriction, "Age Restriction", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Game_AgeRestriction, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Game_AgeRestriction, "", new { @class = "text-danger" })
@@ -52,7 +51,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Game_Multiplayer, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Game_Multiplayer, "Multiplayer", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
                     @Html.EditorFor(model => model.Game_Multiplayer)
@@ -62,7 +61,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Game_Platform, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Game_Platform, "Platform", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Game_Platform, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Game_Platform, "", new { @class = "text-danger" })
@@ -70,7 +69,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Game_ReleaseDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Game_ReleaseDate, "Release Date", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Game_ReleaseDate, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Game_ReleaseDate, "", new { @class = "text-danger" })
@@ -78,10 +77,26 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Game_Score, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Game_Score, "Score", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Game_Score, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Game_Score, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Game_Description, "Description", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Game_Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Game_Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Game_Trailer, "Trailer Link", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Game_Trailer, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Game_Trailer, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -94,5 +109,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Games")
 </div>

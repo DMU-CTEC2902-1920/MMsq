@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using MMSQ.Data.Model;
+using MMSQ.Data;
 using MMSQ.Models;
 
 namespace MMSQ.Controllers
@@ -16,7 +16,7 @@ namespace MMSQ.Controllers
         private GameContext db = new GameContext();
 
         // GET: Games
-        public ActionResult Index()
+        public ActionResult Games()
         {
             return View(db.clsGames.ToList());
         }
@@ -47,13 +47,13 @@ namespace MMSQ.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "GameID,GenreID,Genre_Name,Game_GameTitle,Game_AgeRestriction,Game_Multiplayer,Game_Platform,Game_ReleaseDate,Game_Score")] clsGame clsGame)
+        public ActionResult Create([Bind(Include = "GameID,GenreID,Genre_Name,Game_GameTitle,Game_AgeRestriction,Game_Multiplayer,Game_Platform,Game_ReleaseDate,Game_Score,Game_Description,Game_Trailer")] clsGame clsGame)
         {
             if (ModelState.IsValid)
             {
                 db.clsGames.Add(clsGame);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Games");
             }
 
             return View(clsGame);
@@ -79,13 +79,13 @@ namespace MMSQ.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "GameID,GenreID,Genre_Name,Game_GameTitle,Game_AgeRestriction,Game_Multiplayer,Game_Platform,Game_ReleaseDate,Game_Score")] clsGame clsGame)
+        public ActionResult Edit([Bind(Include = "GameID,GenreID,Genre_Name,Game_GameTitle,Game_AgeRestriction,Game_Multiplayer,Game_Platform,Game_ReleaseDate,Game_Score,Game_Description,Game_Trailer")] clsGame clsGame)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(clsGame).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Games");
             }
             return View(clsGame);
         }
@@ -113,7 +113,7 @@ namespace MMSQ.Controllers
             clsGame clsGame = db.clsGames.Find(id);
             db.clsGames.Remove(clsGame);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Games");
         }
 
         protected override void Dispose(bool disposing)

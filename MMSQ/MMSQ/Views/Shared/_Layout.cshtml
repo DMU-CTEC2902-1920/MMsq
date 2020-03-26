@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title MMSQ </title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Master Page -->
@@ -31,7 +31,8 @@
         <div class="navbar-collapse collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav mr-auto" style="margin-left:605px;">
                 <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
-                <li>@Html.ActionLink("Games Review", "Index", "Games", null, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Games", "Games", "Games", null, new { @class = "nav-link" })</li>
+                <li>@Html.ActionLink("Review", "Review", "Review", null, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink("Developers", "Developers", "Home", null, new { @class = "nav-link" })</a></li>
                 <li>@Html.ActionLink("League Table", "LeagueTable", "Home", null, new { @class = "nav-link" })</li>
             </ul>
